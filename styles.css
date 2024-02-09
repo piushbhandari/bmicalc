@@ -463,7 +463,8 @@ a {
 }
 @media all and (min-width: 62.5em) {
 	.container-desktop-pad {
-		padding: var(--container-gutter);
+		padding-left: var(--container-gutter);
+		padding-right: var(--container-gutter);
 	}
 }
 
