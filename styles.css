@@ -175,6 +175,9 @@ a:focus {
 }
 
 /* utility classes */
+.last-p p:last-child {
+	margin: 0;
+}
 .flex {
 	display: flex;
 }
@@ -460,6 +463,15 @@ a {
 	max-width: var(--container-large);
 }
 
+.container-desktop-pad {
+	padding: 0;
+}
+@media all and (min-width: 48em) {
+	.container-desktop-pad {
+		padding: var(--container-gutter);
+	}
+}
+
 /* containers */
 /* section paddings */
 
@@ -505,3 +517,140 @@ a {
 .section-container--large.section-container--padding-bottom {
 	padding: 0 0 200px;
 }
+.section-container--no-padding {
+	padding: 0;
+}
+
+/* main site */
+.site-header__container {
+	position: relative;
+}
+.site-header__logo {
+	position: absolute;
+	top: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+.bmi-box {
+}
+.bmi-box__textbox {
+	background: linear-gradient(
+		290deg,
+		#d6e6fe 0%,
+		rgba(214, 252, 254, 0) 100%
+	);
+	padding-top: 96px;
+	padding-bottom: 217px;
+	border-radius: 0px 0px 35px 35px;
+	text-align: center;
+}
+.bmi-box__title {
+	margin: 0 0 24px 0;
+}
+.bmi-calculator-box {
+	background: var(--color-white);
+	box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+	border-radius: 16px;
+	position: relative;
+	top: -169px;
+	padding: 24px;
+}
+.bmi-calculator-box__title {
+	margin-bottom: 24px;
+}
+.bmi-calculator-result {
+	padding: 32px;
+	border-radius: 16px;
+	background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+}
+.bmi-calculator-result > * {
+	color: var(--color-white);
+}
+.bmi-calculator-result__title {
+	margin-bottom: 8px;
+}
+.bmi-calculator-result__result {
+	margin-bottom: 24px;
+}
+.bmi-calculator-result__des {
+	margin: 0;
+}
+@media all and (min-width: 48em) {
+	.bmi-box__textbox {
+		padding-top: 112px;
+		padding-bottom: 326px;
+	}
+
+	.bmi-calculator-box {
+		top: -266px;
+		padding: 32px;
+	}
+	.bmi-calculator-box__title {
+		margin-bottom: 32px;
+	}
+	.bmi-calculator-result {
+		border-radius: 16px 999px 999px 16px;
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.bmi-calculator-result__col {
+		width: 50%;
+	}
+	.bmi-calculator-result__title {
+		margin-bottom: 8px;
+	}
+	.bmi-calculator-result__result {
+		margin-bottom: 0;
+	}
+	.bmi-calculator-result__desc {
+		width: 50%;
+	}
+}
+@media all and (min-width: 62.5em)
+{
+    .site-header__logo { 
+		width: 58.75px;
+		height: 58.752px;
+	}
+}
+@media all and (min-width: 87.5em) {
+	.site-header__logo {
+		top: 75px;
+		left: 145px;
+		transform: initial; 
+	}
+	.bmi-box {
+		display: flex;
+		align-items: flex-end;
+	}
+	.bmi-box__textbox {
+		padding-top: 266px;
+		padding-bottom: 200px;
+		text-align: left;
+		max-width: 978px;
+		flex-shrink: 0;
+	}
+	.bmi-box__textbox .container {
+		margin: 0;
+        padding-left: 116px;
+		padding-right: 397px;
+	}
+	.bmi-box__title {
+		margin: 0 0 35px 0;
+	}
+	.bmi-calculator-container {
+		position: relative;
+		bottom: 86px;
+		right: 266px;
+	 
+	}
+	.bmi-calculator-box {
+		top: initial;
+        width: 564px; 
+	}
+} 

@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<header class="site-header">
-			<div class="container">
+			<div class="container container--large site-header__container">
 				<a
 					href="/"
 					class="site-header__logo"
@@ -20,14 +20,66 @@
 			</div>
 		</header>
 
-		<main class="site-container"></main>
-        <div class="container">
-           <h1> ho hey!</h1>
-           <h2>h2</h2>
-           <h3>h3</h3>
-           <h4>h4</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, alias fugiat. Eius laudantium optio quam possimus veritatis vitae maiores perspiciatis, labore nulla quasi ipsam, porro facere. Voluptatem distinctio similique molestiae?</p>
-        </div>
+		<main class="site-container">
+			<div class="section-container section-container--no-padding">
+				<div class="container container--large container-desktop-pad">
+					<div class="bmi-box">
+						<div class="bmi-box__textbox">
+							<div class="container">
+								<h1 class="bmi-box__title">
+									Body Mass <br />
+									Index Calculator
+								</h1>
+								<div class="bmi-box__desc last-p">
+									<p>
+										Better understand your weight in
+										relation to your height using our body
+										mass index (BM) calculator. While BMI is
+										not the sole determinant of a healthy
+										weight, it offers a valuable starting
+										point to evaluate your overall health
+										and well-being.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="container bmi-calculator-container">
+							<div class="bmi-calculator-box">
+								<p class="h3 bmi-calculator-box__title">
+									Enter your details below
+								</p>
+
+								<div class="bmi-calculator-result">
+									<div class="bmi-calculator-result__col">
+										<p class="bmi-calculator-result__title">
+											Your BMI is...
+										</p>
+										<p
+											class="h1 bmi-calculator-result__result"
+										>
+											22.0
+										</p>
+									</div>
+									<p
+										class="bmi-calculator-result__desc small"
+									>
+										Your BMI suggests you’re a healthy
+										weight. Your ideal weight is between
+										<strong
+											><span
+												>9st 6lbs - 12st 10lbs.</span
+											></strong
+										>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
 		<footer class="site-footer"></footer>
 
 		<script src="./script.js"></script>
