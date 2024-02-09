@@ -461,6 +461,24 @@ a {
 .container-desktop-pad {
 	padding: 0;
 }
+.container--curve {
+	position: relative;
+}
+.container--curve:before,
+.container--curve:after {
+	content: "";
+	width: 85px;
+	height: 200px;
+	position: absolute;
+}
+.container--curve-right:after {
+	content: "";
+	background-image: url("./assets/images/pattern-curved-line-left.svg");
+	top: 0;
+	right: 0;
+	background-repeat: none;
+	background-size: cover;
+}
 @media all and (min-width: 62.5em) {
 	.container-desktop-pad {
 		padding-left: var(--container-gutter);
@@ -610,6 +628,20 @@ a {
 .benefits-listing__text {
 	margin: 0;
 }
+.side-by-side {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+.side-by-side__img {
+}
+.side-by-side__textbox {
+	padding-right: var(--container-gutter);
+	padding-left: var(--container-gutter);
+}
+.side-by-side__title {
+	margin-bottom: 32px;
+}
 @media all and (min-width: 48em) {
 	.bmi-box__textbox {
 		padding-top: 112px;
@@ -655,7 +687,21 @@ a {
 		margin-bottom: 0;
 		flex-shrink: 0;
 	}
+	.side-by-side {
+		align-items: center;
+		flex-direction: row;
+		gap: 35px;
+	}
+	.side-by-side__img {
+		position: relative;
+		left: -40px;
+	}
+	.side-by-side__textbox {
+		padding: 0;
+		max-width: 331px;
+	}
 }
+
 @media all and (min-width: 62.5em) {
 	.site-header__logo {
 		width: 58.75px;
@@ -718,5 +764,22 @@ a {
 	}
 	.benefits-listing__title {
 		margin-bottom: 24px;
+	}
+
+	.side-by-side {
+		gap: 131px;
+		align-items: flex-end;
+	}
+	.side-by-side__img {
+		left: initial;
+		flex-shrink: 0;
+		width: 564px;
+	}
+	.side-by-side__textbox {
+		padding-bottom: 40px;
+		max-width: initial;
+	}
+	.side-by-side__title {
+		margin-bottom: 35px;
 	}
 }
