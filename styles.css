@@ -190,6 +190,12 @@ a:focus {
 	display: flex;
 	flex-direction: column;
 }
+
+@media all and (min-width: 87.5em) {
+	.force-new-row {
+		flex-basis: 100%;
+	}
+}
 .align-center {
 	display: flex;
 	align-items: center;
@@ -356,7 +362,8 @@ h6,
 		letter-spacing: -2.4px;
 	}
 }
-p {
+p,
+.p {
 	font-size: 1.6rem;
 	line-height: 150%;
 	margin: 0 0 1rem;
@@ -391,6 +398,7 @@ a {
 }
 .small {
 	font-size: 1.4rem;
+	line-height: 150%;
 }
 .medium {
 	font-size: 1.8rem;
@@ -575,6 +583,55 @@ a {
 .bmi-calculator-box__title {
 	margin-bottom: 24px;
 }
+.bmi-inputs {
+	margin-bottom: 24px;
+}
+.bmi-inputs__top {
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+.bmi-radio-box {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	flex: 1;
+}
+.bmi-radio-box__radio {
+	width: 31px;
+	height: 31px;
+}
+.bmi-radio-box__label {
+	margin: 0;
+}
+.bmi-inputs__bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.bmi-input-box {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.bmi-input-box__label {
+	color: var(--color-electric-blue);
+}
+.bmi-input-box__input {
+	padding: 20px 24px;
+	border-radius: 12px;
+	border: 1px solid var(--color-border);
+	font-weight: 700;
+	margin: 0;
+}
+.bmi-input-box__input:hover {
+	border-color: var(--color-base);
+}
+.bmi-input-box__input::placeholder {
+	opacity: 0.25;
+}
 .bmi-calculator-result {
 	padding: 32px;
 	border-radius: 16px;
@@ -642,6 +699,52 @@ a {
 .side-by-side__title {
 	margin-bottom: 32px;
 }
+.bmi-limitations-box {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+}
+.bmi-limitations-box__title {
+	margin-bottom: 32px;
+}
+.bmi-limitations-box__textbox {
+	text-align: center;
+}
+.limitations-listing {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+}
+.limitations-listing__item {
+	position: relative;
+	width: 100%;
+	z-index: 3;
+	padding: 24px;
+	border-radius: 16px;
+	background: var(--color-white);
+}
+.limitations-listing__item:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	border-radius: 16px;
+	box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+}
+.limitations-listing__top {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+.limitations-listing__title {
+	margin: 0;
+}
+
 @media all and (min-width: 48em) {
 	.bmi-box__textbox {
 		padding-top: 112px;
@@ -654,6 +757,23 @@ a {
 	}
 	.bmi-calculator-box__title {
 		margin-bottom: 32px;
+	}
+
+	.bmi-inputs {
+		margin-bottom: 32px;
+	}
+	.bmi-inputs__top {
+		margin-bottom: 32px;
+	}
+	.bmi-radio-box {
+		gap: 24px;
+	}
+	.bmi-inputs__bottom {
+		flex-direction: row;
+		gap: 24px;
+	}
+	.bmi-input-box {
+		width: 50%;
 	}
 	.bmi-calculator-result {
 		border-radius: 16px 999px 999px 16px;
@@ -699,6 +819,12 @@ a {
 	.side-by-side__textbox {
 		padding: 0;
 		max-width: 331px;
+	}
+	.limitations-listing {
+		gap: 24px;
+	}
+	.limitations-listing__item {
+		width: calc(50% - 12px);
 	}
 }
 
@@ -747,6 +873,9 @@ a {
 		top: initial;
 		width: 564px;
 	}
+	.bmi-input-box {
+		max-width: 238px;
+	}
 	.benefits-box {
 		padding: 72px 116px 96px 116px;
 	}
@@ -781,5 +910,21 @@ a {
 	}
 	.side-by-side__title {
 		margin-bottom: 35px;
+	}
+	.bmi-limitations-box {
+		flex-direction: row;
+		gap: 132px;
+	}
+	.bmi-limitations-box__textbox {
+		flex-shrink: 0;
+		text-align: left;
+		width: 564px;
+	}
+	.limitations-listing {
+		flex-shrink: 0;
+	}
+	.limitations-listing__item {
+		width: 100%;
+		min-width: 365px;
 	}
 }
